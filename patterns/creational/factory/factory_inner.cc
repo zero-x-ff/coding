@@ -9,9 +9,9 @@ class Point
   class PointFactory
   {
   public:
-    static Point NewCartessianPoints(float x, float y) { return {x, y}; }
+    static Point NewCartessianPoint(float x, float y) { return {x, y}; }
 
-    static Point NewPolarPoints(float rho, float theta)
+    static Point NewPolarPoint(float rho, float theta)
     {
       return {rho * std::cos(theta), rho * std::sin(theta)};
     }
@@ -30,8 +30,8 @@ private:
 
 int main()
 {
-  auto cp = Point::Factory.NewCartessianPoints(2, 4);
-  auto pp = Point::Factory.NewPolarPoints(4, 10);
+  auto cp = Point::Factory.NewCartessianPoint(2, 4);
+  auto pp = Point::Factory.NewPolarPoint(4, 10);
 
   return 0;
 }

@@ -6,8 +6,8 @@
 class Point
 {
 public:
-  static Point NewCartessianPoints(float x, float y) { return {x, y}; }
-  static Point NewPolarPoints(float rho, float theta)
+  static Point NewCartessianPoint(float x, float y) { return {x, y}; }
+  static Point NewPolarPoint(float rho, float theta)
   {
     return {rho * std::cos(theta), rho * std::sin(theta)};
   }
@@ -24,6 +24,6 @@ private:
 
 int main()
 {
-  auto cp = Point::NewCartessianPoints(2, 4);
-  auto pp = Point::NewPolarPoints(4, 10);
+  auto cp = Point::NewCartessianPoint(2, 4);
+  auto pp = Point::NewPolarPoint(4, 10);
 }
